@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pokémon Edición Roja (Español)</title>
+    <!-- Cargamos los archivos del emulador seguro EmulatorJS desde una red de desarrollo oficial -->
+    <link rel="stylesheet" href="https://jsdelivr.net">
     <style>
         html, body {
             margin: 0;
@@ -13,17 +15,26 @@
             overflow: hidden;
             background-color: #000;
         }
-        iframe {
+        #game {
             width: 100%;
             height: 100%;
-            border: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- Emulador cargado desde un servidor oficial y seguro de preservación de juegos -->
-    <iframe src="https://archive.org" allow="gamepad"></iframe>
+    <div id="game"></div>
+
+    <script>
+        // Configuración nativa del emulador en tu propio servidor de GitHub
+        window.EJS_player = '#game';
+        window.EJS_gameUrl = 'https://archive.org'; // Archivo del juego
+        window.EJS_core = 'gb'; // Consola Game Boy
+        window.EJS_pathtodata = 'https://jsdelivr.net';
+        window.EJS_startOnLoaded = true; // Arranca solo al cargar
+    </script>
+    
+    <script src="https://jsdelivr.netloader.js"></script>
 
 </body>
 </html>
