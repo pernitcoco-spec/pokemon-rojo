@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Pokémon Edición Roja (Español)</title>
+    <title>Pokémon Rojo Clásico (Español)</title>
     <style>
         html, body {
             margin: 0;
@@ -13,15 +13,18 @@
             overflow: hidden;
             background-color: #000;
         }
-        iframe {
+        #game-container {
             width: 100%;
             height: 100%;
-            border: none;
         }
     </style>
 </head>
 <body>
-    <!-- Este servidor arranca el juego clásico de Game Boy directamente y es compatible con GitHub -->
-    <iframe src="https://juegotk.com" allow="gamepad"></iframe>
+
+    <div id="game-container">
+        <!-- Emulador independiente integrado directamente en tu web -->
+        <iframe src="https://emulatorjs.org" allow="gamepad"></iframe>
+    </div>
+
 </body>
 </html>
